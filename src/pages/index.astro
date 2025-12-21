@@ -1,5 +1,5 @@
 ---
-
+import {Content as Bio} from './bio.mdx';
 ---
 
 <html lang="en">
@@ -8,9 +8,16 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+        <style>
+            /* import stylesheets based off dark mode or not */
+            @import '../styles/sakura-pink.css';
+            /* 
+             @import '../styles/sakura-dark.css' screen and (prefers-color-scheme: dark);
+             */
+        </style>
+		<title>the pumbeyverse</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+        <Bio />
 	</body>
 </html>

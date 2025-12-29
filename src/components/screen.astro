@@ -1,0 +1,7 @@
+---
+import App from './app.astro'
+const { id } = Astro.props
+---
+<div class='screen' id={id}>
+    <slot />
+</div>

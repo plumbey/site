@@ -1,1 +1,55 @@
-@import 'sakura.css';
+@import "rose-pine-moon.css";
+
+body {
+    font-family: 'Maple Mono', monospace;
+    color: var(--txt);
+    display: grid;
+    justify-content: center;
+    background-color: var(--subtle);
+    background-image: url('https://teppyslayouts.neocities.org/img/background/star-04.png');
+}
+
+.screen {
+    border: 3px solid var(--accent3);
+    border-radius: 10px;
+    height: 80vh;
+    width: 50vw;
+    background-image: url('https://teppyslayouts.neocities.org/img/background/stripe-08.png');
+    background-color: var(--bg);
+    padding: 12px;
+    overflow-y: auto;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  margin-bottom: 1.0rem;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent3);
+}
+
+a:hover{
+    font-weight: bold;
+}

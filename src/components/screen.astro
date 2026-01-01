@@ -1,7 +1,9 @@
 ---
-import App from './app.astro'
+import Nav from './navigation.astro'
 const { id } = Astro.props
 ---
+
 <div class='screen' id={id}>
     <slot />
+    <Nav>
 </div>

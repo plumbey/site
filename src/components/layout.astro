@@ -1,21 +1,50 @@
 ---
-import Screen from './screen.astro'
+import Nav from './navigation.astro'
 import '../styles/global.css'
 import '@fontsource/maple-mono'
 const {title} = Astro.props
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-	</head>
-    <body>
-        <Screen>
-            <slot/>
-        </Screen>
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+
+<body>
+    <div class='outer'>
+        <div class='container' id='top'>
+            <div class='segment' id='title'>
+                <div id='title-text'>
+                    <slot name='title' />
+                </div>
+            </div>
+            <div class='segment' id='banner'>
+                <slot name='banner' />
+            </div>
+        </div><span class='segment' id='separator'>
+            </span>
+        <div class='container' id='center'>
+            <div class='segment' id='content'>
+                <slot name='content' />
+            </div>
+            <div class='right'>
+                <div class='segment' id='nav'>
+                    <Nav>
+                </div>
+                <div class='segment' id='social-links'>
+                </div>
+                <div class='segment' id='right-image'>
+                    <slot name='right-image' />
+                </div>
+            </div>
+        </div>
+        <span class='segment' id='footer'>
+            </span>
+    </div>
+</body>
+
 </html>

@@ -4,18 +4,14 @@ const matches = import.meta.glob('./writings/*.mdx', { eager: true });
 const posts = Object.values(matches);
 ---
 
-
-
 <Layout title="Emma's Writings!">
-    <h1> My Writings </h1>
-
-Here's a list of all of the writings I have!
-
-{posts.map
-(post => 
-<ul>
-    <a href={post.url}>
-       {post.title}
-    </a>
-</ul>)}
+    <h1 slot='title'>writings</h1>
+        <ul slot='content'>
+        {posts.map
+        (post => 
+        <li><a href={post.url}>
+               {post.title}
+            </a></li>
+        )}
+        </ul>
 </Layout>

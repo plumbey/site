@@ -1,6 +1,6 @@
 ---
 const matches = import.meta.glob('../pages/*.astro', { eager: true });
-const posts = Object.values(matches);
+let posts = Object.values(matches);
 ---
 
 <ul>

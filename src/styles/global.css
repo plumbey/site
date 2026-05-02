@@ -1,10 +1,17 @@
 @import "rose-pine-moon.css";
 
+* {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
 body {
     font-family: 'Maple Mono', monospace;
     font-size: 0.9em;
     color: var(--txt);
-    display: grid;
+    display: flex;
     justify-content: center;
     background-color: var(--bg);
     background-image: url(../assets/29.svg);
@@ -14,18 +21,16 @@ body {
     border: 1px solid var(--accent3);
     border-radius: 1px;
     background-color: var(--bg2);
-    margin-top: 10vh; /* More flexible space at the top */
+    margin-top: 10vh;
     min-width: 500px;
-    width: 70vw; /* Less overall width */
-    max-width: 1200px; /* Max width to prevent stretching too much on larger screens */
+    width: 70vw;
+    max-width: 1200px;
     min-height: 500px;
-    height: 80vh; /* Adjusted for more vertical space */
-    padding: 1rem 0.5rem; /* Uniform padding */
+    height: 80vh;
+    padding: 1rem 0.5rem;
     box-sizing: border-box;
     display: grid;
-    grid-auto-flow: row dense; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 1fr; 
+    grid-auto-flow: row dense;
     grid-template-rows: 18% 1.5% 70% 6.5%; 
     gap: 1% 0px; 
 }
@@ -40,6 +45,7 @@ body {
     margin-right: 0.5rem;
     border: 1px solid var(--accent1);
     border-radius: 1px;
+    overflow: scroll;
 }
 
 .container {
@@ -81,32 +87,24 @@ body {
     align-items: stretch;
 }
 
-#nav {
+.sidebar-item {
     padding: 0.5rem;
     margin: 0;
 }
 
-#social-links {
-    padding: 0.5rem;
-    margin: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-}
 
 #content {
     width: 80%;
-    overflow-y: auto; /* Allow vertical scrolling */
-    text-align: left; /* Left-aligned for readability */
+    text-align: left;
     padding: 1rem;
     box-sizing: border-box;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow: auto;
 }
 
 #content::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
 }
 
 #content img {
@@ -115,13 +113,12 @@ li {
 }
 
 #right-image {
-    padding: 0.5rem;
-    margin: 0;
     background-image: url(../assets/10.png);
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #right-image img {
@@ -140,6 +137,10 @@ ul {
     margin: 0; /* Reset margins */
 }
 
+li {
+    margin: 0.2rem 0;
+}
+
 a {
     text-decoration: none; /* No underline */
     color: var(--accent3); /* Link color */
@@ -150,3 +151,8 @@ a:hover {
     color: var(--accent2); /* Hover color */
 }
 
+pre {
+    max-width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}

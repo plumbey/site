@@ -1,0 +1,13 @@
+---
+import Layout from '../../components/layout.astro'
+import Text from './the_first_blog.mdx'
+import { Image } from 'astro:assets'
+import Squirrel from '../../assets/squirrel.png'
+---
+
+<Layout title='about'>
+    <h1 slot='title'>hello world</h1>
+    <Image src={Squirrel} alt="beautiful squirrel" slot='right-image'/>
+    <Text slot='content'>
+</Layout>
+

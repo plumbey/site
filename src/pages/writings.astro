@@ -1,6 +1,6 @@
 ---
 import Layout from '../components/layout.astro'
-const matches = import.meta.glob('./writings/*.mdx', { eager: true });
+const matches = import.meta.glob('./writings/*.astro', { eager: true });
 const posts = Object.values(matches);
 ---
 

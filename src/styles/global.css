@@ -31,7 +31,7 @@ body {
     box-sizing: border-box;
     display: grid;
     grid-auto-flow: row dense;
-    grid-template-rows: 18% 1.5% 70% 6.5%; 
+    grid-template-rows: 15% 1.5% 73% 6.5%; 
     gap: 1% 0px; 
 }
 

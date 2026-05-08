@@ -2,14 +2,6 @@
 const matches = import.meta.glob('../pages/*.astro', { eager: true });
 let posts = Object.values(matches);
 ---
-
-<ul>
-{posts.map
-(post => 
-<li><a href={post.url ? post.url : '/'}>
-    ♥ {post.file.slice(
-    post.file.lastIndexOf('/') + 1,
-    post.file.indexOf('.')
-    )}
-        </a></li>
-        )}</ul>
+<ul><li><a href='/index'>♥ about</a></li></ul>
+<ul><li><a href='/photos'>♥ photos</a></li></ul>
+<ul><li><a href='/writings'>♥ writings</a></li></ul>

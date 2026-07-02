@@ -1,0 +1,14 @@
+---
+import Layout from '../../components/layout.astro'
+import Text from './_writ.mdx'
+import { Image } from 'astro:assets'
+import Summer from '../../assets/summer.png'
+export const title = 'summer'
+---
+
+<Layout title='about'>
+    <h1 slot='title'>{title}</h1>
+    <Image src={Summer} alt="poorly drawn sun in sky" slot='right-image'/>
+    <Text slot='content'>
+</Layout>
+

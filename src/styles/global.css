@@ -22,10 +22,10 @@ body {
     border-radius: 1px;
     background-color: var(--bg2);
     margin-top: 10vh;
-    min-width: 500px;
+    min-width: 350px;
     width: 70vw;
     max-width: 1200px;
-    min-height: 500px;
+    min-height: 350px;
     height: 80vh;
     padding: 1rem 0.5rem;
     box-sizing: border-box;
@@ -160,4 +160,22 @@ pre {
     max-width: 100%;
     overflow: auto;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .outer {
+        grid-template-rows: 15% 1.5% 79.5% 0%;
+    }
+    #banner, .right, #footer {
+        visibility: hidden;
+        display: none;
+        clear: both;
+        width: 0%;
+        height: 0%;
+        max-width: 0;
+        max-height: 0;
+    }
+    #title, #content.segment {
+        width: 100%;
+    }
 }

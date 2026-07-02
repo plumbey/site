@@ -1,13 +1,44 @@
 ---
-import Layout from '../components/layout.astro'
+import Nav from '../components/navigation.astro'
+import '../styles/global.css'
+import '@fontsource/maple-mono'
 import AboutMe from './emma.mdx'
 import { Image } from 'astro:assets'
 import Squirrel from '../assets/squirrel.png'
 ---
 
-<Layout title='about'>
-    <h1 slot='title'>about me</h1>
-    <Image src={Squirrel} alt="beautiful squirrel" slot='right-image'/>
-    <AboutMe slot='content'>
-</Layout>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>home</title>
+</head>
+
+<body>
+    <div class='outer'>
+        <div class='container' id='top'>
+            <div class='segment' id='title'>
+                <div id='title-text'>
+                        home
+                </div>
+            </div>
+            <div class='segment' id='banner'>
+                <slot name='banner' />
+            </div>
+        </div><span class='segment' id='separator'>
+            </span>
+        <div class='container' id='center'>
+                <div class='segment' id='content' style="width: 100%; font-size: 1.5em;">
+<Nav></Nav>
+            </div>
+        </div>
+        <span class='segment' id='footer'>
+            </span>
+    </div>
+</body>
+
+</html>
 

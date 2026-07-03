@@ -23,9 +23,9 @@ body {
     background-color: var(--bg2);
     margin: 10px 0 10px 0;
     min-width: 350px;
-    width: 98vw;
+    width: 95vw;
     min-height: 350px;
-    height: 98vh;
+    height: 95vh;
     padding: 1rem 0.5rem;
     box-sizing: border-box;
     display: grid;

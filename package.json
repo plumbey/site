@@ -11,7 +11,9 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@fontsource/maple-mono": "^5.2.6",
-    "astro": "^5.18.2",
+    "astro": "^5.18.2"
+  },
+  "devDependencies": {
     "sass-embedded": "^1.100.0"
   }
 }

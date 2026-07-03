@@ -1,6 +1,29 @@
 ---
+import { Image } from "astro:assets"
+import { getCollection } from "astro:content"
+
+import '../styles/image-gallery.sass'
 import Layout from '../components/layout.astro'
+
+const albums = await getCollection("albums")
 ---
-<Layout title="Emma's photos">
-    <h1 slot='title'>photos!</h1>
-</Layout>
+<Layout>
+    <h1 slot='title'>photos</h1>
+    <h1 slot='banner'>click these photos to see more lovely photos!</h1>
+
+<ul slot='content' class="photogallery">
+    {
+    albums.map((item) => (
+    <li>
+    <a href={`/gallery/${item.slug}`}>
+            <Image 
+            src={item.data.cover}
+            alt={item.data.title}
+            quality="max"
+            loading="lazy"
+            />
+    </a>
+    </li>
+    ))
+    }
+</ul>

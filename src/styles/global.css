@@ -74,10 +74,6 @@ body {
     font-size: clamp(1em, 1.8vw, 2em);
 }
 
-#banner {
-    width: 80%;
-}
-
 #separator {
     background-color: var(--subtle);
     border-color: var(--subtle);
@@ -113,7 +109,6 @@ body {
 }
 
 #content img {
-    max-height: 50%;
     max-width: 50%;
 }
 
@@ -162,11 +157,22 @@ pre {
     box-sizing: border-box;
 }
 
+#banner-outer {
+    width: 100%;
+}
+
+#banner-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 600px) {
     .outer {
         grid-template-rows: 15% 1.5% 79.5% 0%;
     }
-    #banner, .right, #footer {
+    #banner-inner, #banner-outer, .right, #footer {
         visibility: hidden;
         display: none;
         clear: both;
